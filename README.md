@@ -13,15 +13,6 @@ Care & Share is a volunteer organisation dedicated to fostering a community-driv
     <img src="./public/images/about-us.png">
 </div>
 
-
-## Assumptions
-
-- Each city only has 1 branch.
-- 1 email is only used for 1 account.
-- System admins cannot delete managers.
-- Each branch of our organisation only has 1 manager.
-- When users log in using Google OAuth, they are automaically assigned the role as a normal user of the organization. 
-
 ## Features
 
 There are 4 types of users in Care and Share:
@@ -96,15 +87,3 @@ Then you can run the project on localhost using the following command:
 ```
 npm start
 ```
-
-## Known Issues
-We would like to make you aware of the following known issues:
-
-- Multer, the image uploading module, currently encounters an issue when handling some images. Occasionally, users may experience a hang in the image upload process on the site. To resolve this, simply refresh the page and attempt the upload again.
-
-## Our Team
-1. Hong Minh Nguyen (a1894168)
-2. Ngoc Thanh Uyen Ho (a1875049)
-3. Ngoc Thuy Tram Nguyen (a1881053)
-4. Ngoc Hien Trang Nguyen (a1899032)
-
