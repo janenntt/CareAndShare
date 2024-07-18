@@ -1,0 +1,88 @@
+/*Navigation bar*/
+.title{
+    margin-left: 5vw;
+    margin-top: 7vh;
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-left: 10vw;
+  }
+
+.title p{
+    margin-top: 7vh;
+    margin-bottom: 7vh;
+}
+
+.app {
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 20px;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.content {
+    padding: 20px;
+}
+
+#header p {
+    margin-left: 15vw;
+    margin-right: 15vw;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #555;
+}
+
+#inner1 {
+    margin-top: 20px;
+}
+
+#input {
+    margin-left: 15vw;
+    margin-right: 15vw;
+    margin-bottom: 15px;
+}
+
+#input p {
+    margin: 0 0 5px;
+    font-size: 1em;
+    color: #333;
+}
+
+#input input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+    margin-top: 1vh;
+}
+
+#black {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    user-select: none;
+    margin-left: 72vw;
+}
+
+#black:hover {
+    background-color: #555;
+}

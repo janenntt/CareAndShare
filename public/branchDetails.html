@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branch Details</title>
+    <!-- FOR GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- FOR CSS  -->
+    <link rel="stylesheet" href="stylesheets/headerAndFooter.css">
+    <link rel="stylesheet" href="../stylesheets/branch_details.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="left_header">
+            <nav>
+                <a href = "/">
+                    <img src="/images/logo.png" id="logo" alt="logo">
+                </a>
+                <a href = "../AboutUs.html" id="About">About</a>
+                <a href = "../EventList.html" id="Events">Events</a>
+                <a href = "../BranchGrid.html" id="Branches">Branches</a>
+            </nav>
+        </div>
+
+        <div class="right_header">
+            <div class="right_header1">
+                <form>
+                    <img src="/images/Search.png" id="Search" alt="Search">
+                    <input  type="text" placeholder="Search...">
+                </form>
+            </div>
+
+            <div class="right_header2">
+                <div v-if="isNotLoggedIn" class="guest">
+                    <a href="../signup_login/login.html" id="Login" style="text-decoration: none; color:black;">Login</a>
+                </div>
+
+                <div v-if="isManager" class="manager">
+                    <div class="icons">
+                        <img src="/images/downArrow.png" id="downArrow" alt="arrow" @click="hideDropDown()" >
+                        <img @click="DirectToMyAccount()" :src=avatar id="account" alt="account" style="height:7vh; width:7vh; border-radius: 50%; object-fit: cover;">
+                    </div>
+
+                    <div style="display:none;" class="dropdown-menu">
+                        <a @click="DirectToMyAccount()">My Account</a>
+                        <a @click="DirectToBranch()">My Branch</a>
+                        <a href="../Dashboard.html">My Dashboard</a>
+                        <a @click="logout()">Log Out</a>
+                    </div>
+                </div>
+
+                <div  v-if="isAdmin" id="admin">
+
+                    <div class="icons">
+                        <img src="/images/downArrow.png" id="downArrow" alt="arrow" @click="hideDropDown()">
+                        <img @click="DirectToMyAccount()" :src=avatar id="account" alt="account" style="height:7vh; width:7vh; border-radius: 50%; object-fit: cover; margin-left: 1.5vh" >
+                        <img @click="DirectToNotificationList()" src="/images/notification.png" id="notification" alt="notification" style="margin-right: 2vh; display: none;">
+                    </div>
+
+                    <div style="display: none;" class="dropdown-menu">
+                        <a @click="DirectToMyAccount()">My Account</a>
+                        <a href="../Dashboard.html">My Dashboard</a>
+                        <a @click="logout()">Log Out</a>
+                    </div>
+                </div>
+
+                <div  v-if="isUser" id="user">
+                    <div class="icons">
+                        <img @click="hideDropDown()" src="/images/downArrow.png" id="downnArrow" alt="arrow" >
+                        <img @click="DirectToMyAccount()" :src=avatar id="account" alt="account" style="height:6vh; width:6vh; border-radius: 50%; object-fit: cover; margin-left: 1.5vh">
+                        <img @click="DirectToNotificationList()" src="/images/notification.png" id="notification" alt="notification" style="margin-right: 2vh">
+                    </div>
+
+                    <div style="display: none;" class="dropdown-menu">
+                        <a @click="DirectToMyAccount()">My Account</a>
+                        <a @click="logout()">Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <hr style="background-color:  #E6E6E6; position: fixed; width: 100%; height: 2px; border: none;">
+        <div class="both">
+            <div class="up">
+                <div id = "branch-img">
+                    <img src="../images/branch-image.png" alt = "branch-image" style = "height:35vh, width" >
+                </div>
+                <div id = "info">
+                    <p><a href="/" style = "text-decoration: none; color:black;"><u>Home</u></a> /
+                        <a href="../BranchGrid.html" style = "text-decoration: none; color:black;"><u> Branches</u></a> /
+                        {{branchInfo.branch_name}}
+                    </p>
+                    <h1>{{branchInfo.branch_name}}</h1>
+                    <p>Location: {{branchInfo.branch_location}}</p><br>
+                    <div class = "join-buttons">
+                        <button type="button" v-if="users" id = "red" @click = "JoinBranch()">
+                            JOIN NOW
+                        </button>
+                        <button type="button" v-if="usersJoined" id = "gray" @click = "LeaveBranch()">
+                            LEAVE
+                        </button>
+                        <button type="button" v-if="adminOrManagers" style="display:none"></button>
+                        <button type="button" v-if="guestUsers" id = "gray">
+                            Sign In to join
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id = "branch-details-down">
+                <div class = "branch-details-down-left">
+                    <div>
+                        <p><b>About Us</b></p>
+                        <p>{{branchInfo.branch_description}}</p>
+                    </div>
+                </div>
+                <div class="branch-details-down-right">
+                    <div>
+                        <p><b>Location</b></p>
+                        <p>{{branchInfo.branch_location}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id = "branch-details-down">
+                <div class = "branch-details-down-left">
+                    <div>
+                        <p><b>Contact</b></p>
+                        <p>{{branchInfo.branch_email}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="contactINFO">
+            <div><u><b>Contact Us</b></u></div>
+            <div><u>North Terrace Campus</u></div>
+            <div>Level 4 Hub Central</div>
+            <div>University of Adelaide</div>
+            <div>General: Care&Share<u>@adelaide.edu.au</u></div>
+        </div>
+        <div class = "Quick-links">
+            <u><b>Quick Links</b></u>
+            <div><a href = "../AboutUs.html">About Us</a></div>
+            <div><a href = "../EventList.html">Our Events</a></div>
+            <div><a href = "../BranchGrid.html">Our Branches</a></div>
+        </div>
+        <div id="ConnectWithUs">
+            <div><u><b>Connect With Us</b></u></div> <br>
+            <div id = "icons-footer">
+                <img src="/images/Facebook.png" alt="img">
+                <img src="/images/X.png" alt="img">
+                <img src="/images/Instagram.png" alt="img">
+            </div>
+        </div>
+    </footer>
+    <script src="/javascripts/join_branch.js"></script>
+</body>
+</html>

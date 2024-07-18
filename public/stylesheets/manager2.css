@@ -1,0 +1,41 @@
+main{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter';
+}
+
+main h1, h2{
+    margin-left: 50px;
+}
+
+main h1{
+    color: #E42313;
+}
+
+main h2{
+    margin-bottom: 40px;
+}
+
+main .dashboard{
+
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 200px;
+    font-size: 1.1em;
+}
+
+main .dashboardUnit{
+    width: 300px;
+    height: 230px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+main .dashboard #DSimg{
+    height: 150px;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    
+}

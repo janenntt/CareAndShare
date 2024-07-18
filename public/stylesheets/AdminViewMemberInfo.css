@@ -1,0 +1,129 @@
+main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+main .profile {
+    margin-top: 7vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 10vh;
+}
+
+main .profile h1 {
+    margin-bottom: 20px;
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+main .detail {
+    display: flex;
+    flex-direction: column;
+}
+
+main .Names, .Contacts, .Emails {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+main .Names input, .Contacts input, .Emails input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+main .Description textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical; /* Allow vertical resizing */
+}
+
+main .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+main .dropbtn {
+    background-color: #E42313;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+main .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 34vh;
+    margin-bottom: 10vh;
+}
+
+main .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+main .dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+main .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+main .buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+main .Save-Button {
+    background-color: #E42313;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1;
+    margin: 5px;
+    text-align: center;
+}
+
+main .Save-Button:hover {
+    background-color: #E42313;
+}
+
+@media (max-width: 600px) {
+    .buttons {
+        flex-direction: column;
+    }
+
+    .Save-Button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}

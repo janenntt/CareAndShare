@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  font-family: 'Inter';
+}
+
+main{
+  margin-top: 90px;
+}
+/* HEADER CSS */
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background-color: white;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-line {
+  border: 0;
+  height: 1px;
+  background-color: #E6E6E6;
+  width: 100%;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+
+header #logo{
+  width: auto;
+  height: 90px;
+}
+
+header .left_header nav a img{
+  height: 60px;
+  width: auto;
+}
+
+header nav{
+  display: flex;
+  align-items: center;
+  width: auto;
+}
+
+header .right_header form img{
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 25px;
+  width: auto;
+}
+
+#About, #Events, #Branches, #Login {
+  line-height: 90px; /* Equal to the height of the element */
+  margin-left: 35px;
+  margin-right: 35px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+header .right_header{
+  display: flex;
+  flex-direction: row;
+}
+
+
+header .right_header1{
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  width: auto;
+}
+
+
+header .right_header1 form{
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+  border-radius: 25px;
+  background-color: #EDEDED;
+  height: 45px;
+  width: 550px;
+}
+
+header .right_header1 input{
+  box-shadow: none;
+  outline: none;
+  border: none;
+  width: auto;
+  height: 45px;
+  font-size: 1.3em;
+  background-color: #EDEDED;
+  padding: 0px 0px 0px 0px;
+}
+
+header .right_header2 .icons {
+  display: flex;
+  flex-direction: row-reverse;
+  line-height: 90px;
+}
+
+
+header .right_header2 img{
+  margin-top: 20px;
+  margin-right: 10px;
+  height: 50px;
+  width: auto;
+}
+
+header .right_header2 #downArrow{
+  margin-top: 30px;
+  margin-right: 10px;
+  height: 40px;
+  width: auto;
+}
+
+header .dropdown-menu{
+  padding: 10px 20px 10px 10px;
+  right: 10px;
+  top: 5px;
+  flex-direction: column;
+  position: relative;
+  border: 2px solid grey;
+  border-radius: 5px;
+  background-color: white;
+  font-family: 'Inter';
+  z-index: 5;
+}
+
+header .dropdown-menu a{
+  color: black;
+  padding-bottom: 5px;
+  text-decoration: none;
+}
+
+/*FOOTER*/
+
+footer{
+  height: 35vh;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  background-color: black;
+  padding-top: 40px;
+  color: white;
+  font-size: 1.1em;
+}
+
+.contactINFO div{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.Quick-links{
+  display: flex;
+  flex-flow: column;
+  gap: 1vh;
+}
+
+.Quick-links a{
+  color: white;
+}
+
+#ConnectWithUs #icons-footer{
+  display: flex;
+  flex-flow: row;
+  gap: 2vh;
+}
+
+#ConnectWithUs img{
+  width: 40px;
+  height: 40px;
+}
+
+nav > a {
+  text-decoration: none;
+  color: black;
+}
+
+
+

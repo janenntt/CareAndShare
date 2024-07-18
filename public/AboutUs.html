@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="stylesheets/headerAndFooter.css">
+    <link rel="stylesheet" href="stylesheets/aboutUs.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://aui-cdn.atlassian.com/aui-adg/6.0.13/css/aui.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <header>
+        <div class="left_header">
+            <nav>
+                <a href = "/">
+                    <img src="/images/logo.png" id="logo" alt="logo">
+                </a>
+                <a href="../AboutUs.html" id="About" style="color: #E42313;">About</a>
+                <a href = "../EventList.html" id="Events">Events</a>
+                <a href = "../BranchGrid.html" id="Branches">Branches</a>
+            </nav>
+        </div>
+
+        <div class="right_header">
+            <div class="right_header1">
+                <form>
+                    <img src="/images/Search.png" id="Search" alt="Search">
+                    <input  type="text" placeholder="Search...">
+                </form>
+            </div>
+
+            <div class="right_header2">
+                <div v-if="isNotLoggedIn" class="guest">
+                    <a href="../signup_login/login.html" id="Login" style="text-decoration: none; color:black;">Login</a>
+                </div>
+
+                <div v-if="isManager" class="manager">
+                    <div class="icons">
+                        <img src="/images/downArrow.png" id="downArrow" alt="arrow" @click="hideDropDown()" >
+                        <img @click="DirectToMyAccount()" :src=avatar id="account" alt="account" style="height:7vh; width:7vh; border-radius: 50%; object-fit: cover;">
+                    </div>
+
+                    <div style="display:none;" class="dropdown-menu">
+                        <a @click="DirectToMyAccount()">My Account</a>
+                        <a @click="DirectToBranch()">My Branch</a>
+                        <a href="../Dashboard.html">My Dashboard</a>
+                        <a @click="logout()">Log Out</a>
+                    </div>
+                </div>
+
+                <div  v-if="isAdmin" id="admin">
+
+                    <div class="icons">
+                        <img src="/images/downArrow.png" id="downArrow" alt="arrow" @click="hideDropDown()">
+                        <img @click="DirectToMyAccount()" :src=avatar id="account" alt="account" style="height:7vh; width:7vh; border-radius: 50%; object-fit: cover; margin-left: 1.5vh" >
+                        <img @click="DirectToNotificationList()" src="/images/notification.png" id="notification" alt="notification" style="margin-right: 2vh; display: none;">
+                    </div>
+
+                    <div style="display: none;" class="dropdown-menu">
+                        <a @click="DirectToMyAccount()">My Account</a>
+                        <a href="../Dashboard.html">My Dashboard</a>
+                        <a @click="logout()">Log Out</a>
+                    </div>
+                </div>
+
+                <div  v-if="isUser" id="user">
+                    <div class="icons">
+                        <img @click="hideDropDown()" src="/images/downArrow.png" id="downnArrow" alt="arrow" >
+                        <img @click="DirectToMyAccount()" :src=avatar id="account" alt="account" style="height:6vh; width:6vh; border-radius: 50%; object-fit: cover; margin-left: 1.5vh">
+                        <img @click="DirectToNotificationList()" src="/images/notification.png" id="notification" alt="notification" style="margin-right: 2vh">
+                    </div>
+
+                    <div style="display: none;" class="dropdown-menu">
+                        <a @click="DirectToMyAccount()">My Account</a>
+                        <a @click="logout()">Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <hr class = "headerline" color="E6E6E6"> -->
+    </header>
+
+
+
+    <main>
+        <hr style= "position: fixed"; color="E6E6E6" width="100%">
+        <div style="position: fixed; width: 100%;">
+            <hr style="background-color: #E42313; width: 8.5%; height: 4px; border: none; position: fixed; left: 8%; margin-top: -1px;">
+        </div>
+
+        <div class = "About">
+            <h1><b style="color: #E42313">Care & Share</b> is a volunteer-driven organization</h1>
+            <h1><b>dedicated to enhancing healthcare accessibility</b></h1>
+            <br>
+            <p><i>With a steadfast commitment to serving those in need, our organization</i></p>
+            <p><i>has made significant achievements in supporting and uplifting the community</i></p>
+        </div>
+
+        <div class = "pic">
+            <div class="leftpic">
+                <img src="https://static.vecteezy.com/system/resources/previews/018/965/476/original/eps10-red-prize-medal-abstract-icon-or-logo-isolated-on-white-background-award-or-winner-symbol-in-a-simple-flat-trendy-modern-style-for-your-website-design-and-mobile-app-vector.jpg" style="width: 200px; height: 200px;">
+                <p>Volunteer of the Year 2024</p>
+            </div>
+
+            <div class="rightpic">
+                <img src="https://static.vecteezy.com/system/resources/previews/029/799/470/original/eps10-illustration-of-crowd-of-red-people-icon-user-group-network-sign-corporate-team-group-symbol-isolated-on-white-background-community-member-icon-business-team-work-activity-vector.jpg" style="width: 200px; height: 200px;">
+                <p>Community Impact Award</p>
+            </div>
+
+            <div class="rightpic">
+                <img src="https://media.istockphoto.com/id/1218275315/vector/cross-medicine-on-white-background-for-medical-design-isolated-illustration-white-background.jpg?s=612x612&w=0&k=20&c=0WCcnnnxNfDpbsldrxG-1hTsRM2z2lu7I3-sJFrKFTM=" style="width: 200px; height: 200px;">
+                <p>Health Education Champion</p>
+            </div>
+        </div>
+
+        <div class = "info">
+            <div class = "text">
+                <p style="text-align: center;"><b>Care & Share</b> is a volunteer organisation which is dedicated to fostering a community-driven approach to healthcare, where compassion and support intersect to create lasting change. Our volunteer organization is founded on the belief that everyone deserves access to quality healthcare, regardless of their circumstances.</p>
+                <div class = "pic">
+                    <div class="leftpic">
+                        <img src="https://www.redcross.org/content/dam/redcross/local/news-articles/national-capital-greater-chesapeake/Volunteers.jpg.transform/1288/q70/feature/image.jpeg" alt="about-us" style="width: 320px; height: 200px; align-items: center;">
+                    </div>
+
+                    <div class="rightpic">
+                        <img src="https://www.redcross.ie/wp-content/uploads/elementor/thumbs/106530675_10164282557870352_3902314559704251949_o-Edited-q37yxilq5dztvuoy10dct9u2yfuxp1bt0u7qykx5wa.png" alt="about-us" style="width: 320px; height: 200px; align-items: center;">
+                    </div>
+
+                    <div class="rightpic">
+                        <img src="https://www.drk.de/fileadmin/_processed_/6/4/csm_Bangladesch-Rothalbmond-Freiwilliger-DRKler_c_DRK_88b11c40b3.jpg" alt="about-us" style="width: 320px; height: 200px; align-items: center;">
+                    </div>
+                </div>
+                <p style="text-align: center;"><b>Care & Share</b> operates at the intersection of empathy and expertise. Our volunteers, comprised of healthcare professionals, advocates, and passionate individuals, work tirelessly to address healthcare disparities and promote wellness within our communities.
+                    Through our diverse range of initiatives, we strive to make a meaningful impact on the lives of individuals and families facing health challenges. From providing essential medical services to underprivileged populations to advocating for healthcare policy reform, we are driven by a shared vision of a healthier, more equitable future for all.</p>
+
+            </div>
+        </div>
+
+        <div class = "About">
+            <h3>People helping people. You can be one of the helpers too.</h3>
+            <h1><b>Together we achieve more</b></h1>
+        </div>
+
+        <div class = "text">
+            <p><b>At Care & Share</b>, collaboration is at the heart of everything we do. We partner with local healthcare providers, community organizations, and stakeholders to amplify our efforts and maximize our reach. Together, we cultivate a culture of care, compassion, and empowerment, where every member of our community can thrive.
+                Join us in our mission to Care & Share – because together, we can make a difference in healthcare and in the lives of those we serve.</p>
+        </div>
+
+
+    </main>
+    <footer>
+        <div class="contactINFO">
+            <div><u><b>Contact Us</b></u></div>
+            <div><u>North Terrace Campus</u></div>
+            <div>Level 4 Hub Central</div>
+            <div>University of Adelaide</div>
+            <div>General: Care&Share<u>@adelaide.edu.au</u></div>
+        </div>
+        <div class = "Quick-links">
+            <u><b>Quick Links</b></u>
+            <div><a href = "../AboutUs.html">About Us</a></div>
+            <div><a href = "../EventList.html">Our Events</a></div>
+            <div><a href = "../BranchGrid.html">Our Branches</a></div>
+        </div>
+        <div id="ConnectWithUs">
+            <div><u><b>Connect With Us</b></u></div> <br>
+            <div id = "icons-footer">
+                <img src="/images/Facebook.png">
+                <img src="/images/X.png">
+                <img src="/images/Instagram.png">
+            </div>
+        </div>
+    </footer>
+    <script src="../javascripts/aboutUs.js"></script>
+</body>
+</html>

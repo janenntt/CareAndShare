@@ -1,0 +1,95 @@
+/*main*/
+main{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10vh;
+}
+
+main .About{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Inter';
+    font-size: 1.1em;
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
+
+.About p{
+    align-items: left;
+}
+
+main .pic{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: 'Inter';
+    font-weight: bold;
+    font-size: 1.1em;
+    align-items: center;
+    padding-left: 150px;
+    padding-right: 150px;
+
+}
+
+main .leftpic,.rightpic{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    border-radius: 20px;
+    height: auto;
+    align-items: center;
+    padding-bottom: 2vw;
+}
+
+main .pic img{
+    border-radius: 20px;
+    width: 35vw;
+    height: auto;
+}
+
+main .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+main #about-us-photo {
+    width: 50%; /* Set the width of the image to fill its container */
+    height: auto; /* Maintain aspect ratio */
+    box-sizing: border-box;
+    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+}
+
+main .info {
+    background-color: #EDEDED;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Inter';
+    font-size: 1em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+main .text {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter';
+    font-size: 1.1em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.text p{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    align-items: center;
+}

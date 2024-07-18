@@ -1,0 +1,116 @@
+main{
+    font-family: 'Inter';
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form */
+input, textarea{
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
+    font-size: 1em;
+    border-radius: 7px;
+    border: 1px solid black;
+    padding: 0.5em;
+    width: 35vw;
+}
+
+
+input{
+    height: 7vh;
+}
+
+
+textarea {
+    height: 25vh;
+}
+
+.title {
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    display: flex;
+    justify-content: center;
+}
+
+.center{
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.first {
+    margin-right: 2vw;
+    width: 12vw;
+}
+
+.second {
+    width: 20vw;
+}
+
+.up-input-div{
+    display: flex;
+}
+
+.down-input-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35vw;
+}
+
+.button-div{
+    display: flex;
+    flex-direction: row;
+    width: 40vw;
+    justify-content: space-between;
+}
+
+
+/* Input Errors */
+.invalid-input{
+    border: 1px solid red;
+}
+
+.error-message{
+    color: red;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+
+/* Buttons */
+.button-div{
+    width: 22vw;
+}
+
+#submit-btn, #back-btn, #sign-up-branch-btn{
+    width: 15vw;
+    text-align: center;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    margin-top: 1vh;
+    border-radius: 10px;
+    border: none;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#back-btn{
+    color: black;
+    background-color: #EDEDED;
+}
+
+#submit-btn, #sign-up-branch-btn{
+    color: white;
+    background-color: #E42313;
+}
+
+#submit-btn, #back-btn{
+    width: 10vw;
+}
+
+#submit-btn {
+    margin-left: 2vw;
+}
+

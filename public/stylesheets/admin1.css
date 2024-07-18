@@ -1,0 +1,35 @@
+main{
+    font-family: 'Inter';
+}
+main .a{
+    display: flex;
+    flex-direction: row;
+}
+
+main img{
+    margin-top: 5px;
+    width: 35px;
+    height: 35px;
+}
+
+main .a h2{
+    margin: 0px 0px 0px 10px;
+    color: #E42313;
+}
+
+main #d{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 10vw;
+    font-weight: bold;
+}
+
+hr .line-break{
+    background-color: E6E6E6;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+}

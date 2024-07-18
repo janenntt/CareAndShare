@@ -1,0 +1,59 @@
+main{
+    margin-top: 40px;
+    font-family: 'Inter';
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+main .a{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+main .a img{
+    object-fit: cover;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+main .a h2{
+    margin: 0px 0px 0px 10px;
+    color:#E42313;
+}
+
+main .Events{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 80px;
+    margin-bottom: 50px;
+}
+
+main .Events #eventsPic{
+    margin-right: 20px;
+}
+
+main .Events h4{
+   margin-top: 0px;
+   margin-bottom: 10px;
+}
+
+main #RSVP{
+    color: white;
+    background-color: #E42313;
+    width: 100px;
+    text-align: center;
+}
+
+main #adjust{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+
+main #x{
+    margin-bottom: 5px;
+}

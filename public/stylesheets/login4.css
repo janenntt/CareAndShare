@@ -1,0 +1,74 @@
+main{
+    font-family: 'Inter';
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 300px;
+}
+
+main .center{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+main .email{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.email input{
+    width: 600px;
+    height: 40px;
+    border-radius: 10px;
+    margin: 2px;
+    font-size: 1.3em;
+}
+
+#big{
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+#red{
+    font-size: 1.2em;
+    color: white;
+    background-color: #E42313;
+    width: 200px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    border-radius: 10px;
+}
+
+
+#x{
+    margin: 0px 0px 10px 0px;
+}
+
+main #next{
+    color: black;
+    background-color: #EDEDED;
+    width: 30vw;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+main #back{
+    border-radius: 10px;
+    color: white;
+    background-color: #E42313;;
+    width: 30vw;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+.h{
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+}

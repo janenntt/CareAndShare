@@ -1,0 +1,85 @@
+main {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5vh;
+    font-family: 'inter';
+    padding-bottom: 50vh;
+}
+
+main h1 {
+    margin-top: 7vh;
+    text-align: center;
+}
+
+
+/*Navigation bar*/
+.title{
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-left: 10vw;
+    margin-bottom: 3vh;
+    margin-top: 6vh;
+}
+
+main .a{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5vh;
+}
+
+main .a img{
+    margin-left: 30px;
+    width: 20px;
+    height: 20px;
+}
+
+main .a h2{
+    margin: 0px 0px 0px 2vw;
+    color:#E42313;
+}
+
+main .Events{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10vw;
+    margin-bottom: 5vh;
+    margin-top: 3vh;
+    padding-right: 30px;
+}
+
+main .Events img{
+    height: 25vh;
+    width: 22vw;
+    border-radius: 5px;
+}
+
+main .Events .text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5vw;
+    padding-right: 30px;
+}
+
+main .Events h4, p{
+   margin-bottom: 1vw;
+}
+
+main .Events h3, p{
+    margin-bottom: 1vw;
+ }
+
+main .Events button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+main .Events button img {
+    margin-top: 20x;
+    width: 30px; /* Adjusts the size of the pencil and trash icons */
+    height: 30px;
+    border: 1px solid #E6E6E6;
+}
+

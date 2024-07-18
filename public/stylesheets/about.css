@@ -1,0 +1,57 @@
+main{
+    font-family: 'Inter';
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10vh;
+}
+
+main .about{
+    display: flex;
+    justify-content: flex-start;
+    background-color: #EDEDED;
+    margin-bottom: 5vw;
+}
+
+main img{
+    margin: 3vh 5vw 3vh 5vw;
+    height: 30vh;
+    width: auto;
+    border: 2px solid grey;
+    border-radius: 10px;
+}
+
+main .about #a{
+    margin-top: 3vh;
+}
+
+main .about #b{
+    margin-top: 3vh;
+    margin-left: 2vw;
+}
+
+main .redButton {
+    color: white;
+    background-color: #E42313;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+main .redButton#branch {
+    width: 7vw;
+}
+
+main .redButton#RSVP{
+    width: 5vw;
+}
+
+main .detail{
+    margin-left: 5vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+main .detail #right{
+    margin-right: 20vw;
+}

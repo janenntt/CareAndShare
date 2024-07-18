@@ -1,0 +1,283 @@
+main{
+    display: flex;
+    font-family: 'Inter';
+    margin-bottom: 20vw;
+}
+
+main .MyAccount h1{
+    margin-top: 7vh;
+    color: #E42313;
+    margin-bottom: 50px;
+    font-size: 2.5em;
+}
+
+main .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10vw;
+    gap: 2vh;
+
+}
+
+main .profile img{
+    width: 300px;
+    height: 300px;
+    margin-bottom: 50px;
+}
+
+main .profile #black{
+    color: white;
+    background-color: black;
+    text-align: center;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    border-radius: 15px;
+    width: 400px;
+}
+
+main .profile #white{
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    text-align: center;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    border-radius: 15px;
+    width: 400px;
+}
+
+main .detail{
+    margin-top: 25vh;
+    margin-left: 10vw;
+    font-size: 1.2em;
+    display: flex;
+    flex-flow: column;
+    gap: 4vh;
+}
+
+main .detail #bold{
+    font-weight: bold;
+}
+
+main .branches{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5vw;
+}
+
+
+main .edit{
+    background-color: white;
+    margin: 10px;
+    display: flex;
+    margin-top: 10vh;
+    margin-left: 100px;
+    width: 120px;
+    height: 30px;
+    border: 2px solid black;
+}
+
+main .edit img{
+    width: 30px;
+    height: 30px;
+}
+
+main .edit button{
+    background-color: white;
+    border: none;
+
+}
+
+main .edit p{
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    text-align: center;
+    width: 8vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    border-radius: 15px;
+}
+
+.detail{
+    display: flex;
+    flex-flow: column;
+    gap: 2vh;
+}
+
+
+.Names{
+    display: flex;
+    flex-flow: row;
+    gap: 2vh;
+}
+
+.Contacts{
+    display: flex;
+    flex-flow: row;
+    gap: 2vh;
+}
+
+.Buttons{
+    display: flex;
+    flex-flow: row;
+    gap: 2vh;
+}
+
+.Cancel{
+    color: white;
+    background-color: #E42313;
+    width: 10vw;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+}
+
+.Save{
+    border-radius: 10px;
+    color: black;
+    background-color: #EDEDED;
+    width: 10vw;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+}
+
+.Names input{
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    width: 17vw;
+    height: 6vh;
+    border-radius: 6px;
+}
+
+.Contacts input{
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    width: 17vw;
+    height: 6vh;
+    border-radius: 6px;
+}
+
+.Emails input{
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    width: 35.75vw;
+    height: 6vh;
+    border-radius: 6px;
+}
+
+#avatar-display{
+    width: 20vw;
+}
+
+.buttons .Save-Button{
+    height: 5vh;
+    width: 10vw;
+    background-color: #E42313;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    font-weight:bold;
+}
+
+.dropdown {
+    margin-top: 8vh;
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #E42313;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 36.5vw;
+    height: 7vh;
+    font-weight:bold;
+    border-radius: 6px;
+}
+
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 12px;
+    text-decoration: none;
+    display: block;
+    width: 36.3vw;
+    height: 5vh;
+}
+
+.close-icons{
+    border: none;
+    background-color: #f1f1f1;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #B42115;
+}
+
+#openPopupBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

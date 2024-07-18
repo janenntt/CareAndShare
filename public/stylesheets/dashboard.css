@@ -1,0 +1,45 @@
+.dashboardVue{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter';
+}
+
+main h1{
+    margin-top: 7vh;
+    margin-left: 50px;
+    color: #E42313;
+    margin-bottom: 30px;
+}
+
+main h2{
+    margin-left: 50px;
+    color: black;
+}
+
+main .dashboard{
+    margin-top: 7vh;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 100px;
+    font-size: 1.1em;
+}
+
+main .dashboardUnit{
+    width: 300px;
+    height: 220px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+main .dashboard img{
+    margin-top: 20px;
+    height: 120px;
+    width: auto;
+}
+
+main h4{
+    margin-top: 20px;
+    color: black;
+    margin-bottom: 20px;
+}

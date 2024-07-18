@@ -1,0 +1,119 @@
+main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.profile {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.Information-branch {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.Names, .Contacts, .Emails, .Description {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.Names input, .Contacts input, .Emails input, .Description textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.dropbtn {
+    background-color: #E42313;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 100%;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.Save-Button, .Add-Button {
+    background-color: #E42313;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1;
+    margin: 5px;
+    text-align: center;
+}
+
+.Save-Button:hover, .Add-Button:hover {
+    background-color:#E42313;
+}
+
+@media (max-width: 600px) {
+    .buttons {
+        flex-direction: column;
+    }
+
+    .Save-Button, .Add-Button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}

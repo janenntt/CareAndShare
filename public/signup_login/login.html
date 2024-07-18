@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <!-- FOR GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- FOR CSS  -->
+    <link rel="stylesheet" href="../stylesheets/headerAndFooter.css">
+    <link rel="stylesheet" href="../stylesheets/login.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async></script>
+</head>
+
+<body>
+    <header>
+        <div class="left_header">
+            <nav>
+                <a href = "/">
+                    <img src="/images/logo.png" id="logo" alt="logo">
+                </a>
+                <a href = "../AboutUs.html" id="About">About</a>
+                <a href = "../EventList.html" id="Events">Events</a>
+                <a href = "../BranchGrid.html" id="Branches">Branches</a>
+            </nav>
+        </div>
+
+        <div class="right_header">
+            <div class="right_header1">
+                <form>
+                    <img src="/images/Search.png" id="Search" alt="Search">
+                    <input  type="text" placeholder="Search...">
+                </form>
+            </div>
+
+            <div class="right_header2">
+                <div v-if="isNotLoggedIn" class="guest">
+                    <a href="../signup_login/login.html" id="Login" style="text-decoration: none; color:black;">Login</a>
+                </div>
+
+                <div v-if="isManager" class="manager">
+                    <div class="icons">
+                        <img src="/images/downArrow.png" id="downArrow" alt="arrow" @click="hideDropDown()" >
+                        <img @click="DirectToMyAccount()" :src=avatar id="account" alt="account" style="height:7vh; width:7vh; border-radius: 50%; object-fit: cover;">
+                    </div>
+
+                    <div style="display:none;" class="dropdown-menu">
+                        <a @click="DirectToMyAccount()">My Account</a>
+                        <a @click="DirectToBranch()">My Branch</a>
+                        <a href="../Dashboard.html">My Dashboard</a>
+                        <a @click="logout()">Log Out</a>
+                    </div>
+                </div>
+
+                <div  v-if="isAdmin" id="admin">
+
+                    <div class="icons">
+                        <img src="/images/downArrow.png" id="downArrow" alt="arrow" @click="hideDropDown()">
+                        <img @click="DirectToMyAccount()" :src=avatar id="account" alt="account" style="height:7vh; width:7vh; border-radius: 50%; object-fit: cover;" >
+                    </div>
+
+                    <div style="display: none;" class="dropdown-menu">
+                        <a @click="DirectToMyAccount()">My Account</a>
+                        <a href="../Dashboard.html">My Dashboard</a>
+                        <a @click="logout()">Log Out</a>
+                    </div>
+                </div>
+
+                <div  v-if="isUser" id="user">
+                    <div class="icons">
+                        <img @click="hideDropDown()" src="/images/downArrow.png" id="downnArrow" alt="arrow" >
+                        <img @click="DirectToMyAccount()" :src=avatar id="account" alt="account" style="height:7vh; width:7vh; border-radius: 50%; object-fit: cover;">
+                        <img @click="DirectToNotificationList()" src="/images/notification.png" id="notification" alt="notification">
+                    </div>
+
+                    <div style="display: none;" class="dropdown-menu">
+                        <a @click="DirectToMyAccount()">My Account</a>
+                        <a @click="logout()">Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Gray line across the entire header -->
+    <hr style="background-color:  #E6E6E6; position: fixed; width: 100%; height: 2px; border: none;">
+
+    <main>
+        <div class="title">
+            <h1>Login</h1>
+        </div>
+        <div class="app1">
+            <div class="container">
+                <div>
+                    <p><b>Email</b></p>
+                    <br>
+                    <input id="email" type="text" placeholder="Enter your email" v-model="user.email">
+                </div>
+                <br>
+                <div>
+                    <p><b>Password</b></p>
+
+                    <br>
+
+                    <input id="password" type="password" placeholder="Enter your password" v-model="user.password">
+                </div>
+            </div>
+            <br>
+            <div class="button">
+                <div>
+                    <p @click="login" class="redButton">Sign in</p>
+                    <p @click="directToSignup" class="redButton">Sign up</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <pre>__________________   Or   __________________  </pre>
+        </div>
+
+        <div id="g_id_onload"
+            data-client_id="546001364414-cjtk0kvdnmv2rvg0n4duosekb690adbs.apps.googleusercontent.com"
+            data-context="signin"
+            data-ux_mode="popup"
+            data-callback="do_google_login"
+            data-auto_prompt="false">
+        </div>
+
+        <div class="g_id_signin"
+            data-type="standard"
+            data-shape="rectangular"
+            data-theme="filled_blue"
+            data-text="signin_with"
+            data-size="large"
+            data-logo_alignment="left">
+        </div>
+
+    </main>
+    <footer>
+        <div class="contactINFO">
+            <div><u><b>Contact Us</b></u></div>
+            <div><u>North Terrace Campus</u></div>
+            <div>Level 4 Hub Central</div>
+            <div>University of Adelaide</div>
+            <div>General: Care&Share<u>@adelaide.edu.au</u></div>
+        </div>
+        <div class = "Quick-links">
+            <u><b>Quick Links</b></u>
+            <div><a href = "../AboutUs.html">About Us</a></div>
+            <div><a href = "../EventList.html">Our Events</a></div>
+            <div><a href = "../BranchGrid.html">Our Branches</a></div>
+        </div>
+        <div id="ConnectWithUs">
+            <div><u><b>Connect With Us</b></u></div> <br>
+            <div id = "icons-footer">
+                <img src="/images/Facebook.png">
+                <img src="/images/X.png">
+                <img src="/images/Instagram.png">
+            </div>
+        </div>
+    </footer>
+    <script src="/javascripts/login.js"></script>
+    <script src="/javascripts/sign_ups.js"></script>
+
+</body>
+</html>

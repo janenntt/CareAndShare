@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Branches</title>
+    <!-- FOR GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- FOR CSS  -->
+    <link rel="stylesheet" href="stylesheets/headerAndFooter.css">
+    <link rel="stylesheet" href="stylesheets/BranchesSystemAdmin.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <header>
+        <div class="left_header">
+            <nav>
+                <a href = "/">
+                    <img src="/images/logo.png" id="logo" alt="logo">
+                </a>
+                <a href = "../AboutUs.html" id="About">About</a>
+                <a href = "../EventList.html" id="Events">Events</a>
+                <a href = "../BranchGrid.html" id="Branches">Branches</a>
+            </nav>
+        </div>
+
+        <div class="right_header">
+            <div class="right_header1">
+                <form>
+                    <img src="/images/Search.png" id="Search" alt="Search">
+                    <input  type="text" placeholder="Search...">
+                </form>
+            </div>
+
+            <div class="right_header2">
+                <div v-if="isNotLoggedIn" class="guest">
+                    <a href="../signup_login/login.html" id="Login" style="text-decoration: none; color:black;">Login</a>
+                </div>
+
+                <div v-if="isManager" class="manager">
+                    <div class="icons">
+                        <img src="/images/downArrow.png" id="downArrow" alt="arrow" @click="hideDropDown()" >
+                        <img @click="DirectToMyAccount()" :src=avatar id="account" alt="account" style="height:7vh; width:7vh; border-radius: 50%; object-fit: cover;">
+                    </div>
+
+                    <div style="display:none;" class="dropdown-menu">
+                        <a @click="DirectToMyAccount()">My Account</a>
+                        <a @click="DirectToBranch()">My Branch</a>
+                        <a href="../Dashboard.html">My Dashboard</a>
+                        <a @click="logout()">Log Out</a>
+                    </div>
+                </div>
+
+                <div  v-if="isAdmin" id="admin">
+
+                    <div class="icons">
+                        <img src="/images/downArrow.png" id="downArrow" alt="arrow" @click="hideDropDown()">
+                        <img @click="DirectToMyAccount()" :src=avatar id="account" alt="account" style="height:7vh; width:7vh; border-radius: 50%; object-fit: cover;" >
+                    </div>
+
+                    <div style="display: none;" class="dropdown-menu">
+                        <a @click="DirectToMyAccount()">My Account</a>
+                        <a href="../Dashboard.html">My Dashboard</a>
+                        <a @click="logout()">Log Out</a>
+                    </div>
+                </div>
+
+                <div  v-if="isUser" id="user">
+                    <div class="icons">
+                        <img @click="hideDropDown()" src="/images/downArrow.png" id="downnArrow" alt="arrow" >
+                        <img @click="DirectToMyAccount()" :src=avatar id="account" alt="account" style="height:7vh; width:7vh; border-radius: 50%; object-fit: cover;">
+                        <img @click="DirectToNotificationList()" src="/images/notification.png" id="notification" alt="notification">
+                    </div>
+
+                    <div style="display: none;" class="dropdown-menu">
+                        <a @click="DirectToMyAccount()">My Account</a>
+                        <a @click="logout()">Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <hr>
+    <main>
+        <div class = "title">
+            <p><a href="/" style="color:black">Home</a> &gt; &nbsp;</p>
+            <p><a href="../Dashboard.html" style="color:black">My Dashboard</a> &gt; &nbsp;</p>
+            <p style="color:#E42313"> View branches </p>
+        </div>
+        <div class="Branches">
+            <h2>View Branches</h2>
+            <button type = "button" @click="AddNewBranch()">+</button>
+        </div>
+        <div class="belowTable">
+            <ul id="branchList">
+                <li class="header">
+                    <p>Branch name</p>
+                    <p>Branch location</p>
+                    <div class="button-container"></div>
+                </li>
+                <li v-for="branch in branchInfo" :key="branch.branchID">
+                    <p>{{branch.branch_name}}</p>
+                    <p>{{branch.branch_location}}</p>
+                    <div class="button-container">
+                        <button type="button" @click="directEditBranchPage(branch.branch_id)"><img src='./images/pencil.png' alt="Edit"></button>
+                        <button type="button" @click="DeleteBranch(branch.branch_id)"><img src='./images/dustbin.png' alt="Delete"></button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="contactINFO">
+            <div><u><b>Contact Us</b></u></div>
+            <div><u>North Terrace Campus</u></div>
+            <div>Level 4 Hub Central</div>
+            <div>University of Adelaide</div>
+            <div>General: Care&Share<u>@adelaide.edu.au</u></div>
+        </div>
+        <div class = "Quick-links">
+            <u><b>Quick Links</b></u>
+            <div><a href = "../AboutUs.html">About Us</a></div>
+            <div><a href = "../EventList.html">Our Events</a></div>
+            <div><a href = "../BranchGrid.html">Our Branches</a></div>
+        </div>
+        <div id="ConnectWithUs">
+            <div><u><b>Connect With Us</b></u></div> <br>
+            <div id = "icons-footer">
+                <img src="/images/Facebook.png" alt="img">
+                <img src="/images/X.png" alt="img">
+                <img src="/images/Instagram.png" alt="img">
+            </div>
+        </div>
+    </footer>
+    <script src="/javascripts/admin3.js"></script>
+</body>
+</html>

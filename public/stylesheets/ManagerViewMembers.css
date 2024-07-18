@@ -1,0 +1,82 @@
+main{
+    font-family: 'Inter';
+    padding-bottom: 50vh;
+}
+
+.manager-view-members-table {
+    padding-left: 10vw;
+}
+
+/* nav bar */
+.a{
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-left: 10vw;
+    margin-bottom: 5vh;
+    margin-top: 7vh;
+}
+
+/* member table */
+
+.top{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    border: 2px solid #D3D3D3;
+}
+
+
+.table-header-bar{
+    display: flex;
+    font-weight: bold;
+    width: 80vw;
+    height: 6vh;
+    font-size: 1.1em;
+    background-color: #D3D3D3;
+}
+
+.table-member-row{
+    display: flex;
+    width: 80vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+
+
+.table-header-bar > p {
+    margin-left: 5vw;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    align-content: center;
+}
+
+.table-member-row > div{
+    margin-left: 5vw;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+
+.name, #member-name, .phone-number, .email, #member-phone-number, #member-email {
+    width: 13vw;
+
+}
+
+.location, #member-location{
+    width: 10vw;
+
+}
+
+#member-name {
+    font-style: italic;
+}
+
+
+
+
+

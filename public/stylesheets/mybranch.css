@@ -1,0 +1,50 @@
+main {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    margin-bottom: 7vh;
+}
+
+main img {
+    width: 25vw;
+    height:30vh;
+}
+#my-branch-left{
+    margin-top: 5vh;
+    padding-left: 10vw;
+}
+
+#my-branch-right {
+    padding-left: 12vw;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10vh;
+
+}
+
+.bold-text {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 1vh;
+}
+
+.branch-edit-btn > button {
+    margin-top:  1.5vh;
+   width: 2.5vw;
+   height: 4vh;
+}
+
+.branch-edit-btn > button > img {
+    width: 1.5vw;
+    height: 3vh;
+}
+
+.branch-edit-btn {
+    padding-left: 15vw;
+}
+
+.branch-details > * {
+    padding-bottom: 2vh;
+}
+

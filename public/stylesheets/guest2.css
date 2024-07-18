@@ -1,0 +1,12 @@
+main{
+    font-family: 'Inter';
+    display: flex;
+    flex-direction: column;
+}
+
+
+main .row{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}

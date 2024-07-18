@@ -1,0 +1,80 @@
+main{
+    font-family: 'Inter';
+    padding-bottom: 50vh;
+}
+
+.view-rsvp-list{
+    padding-left: 10vw;
+}
+
+/* nav bar */
+.a{
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-left: 10vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+/* rsvp table */
+
+.top{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    border: 2px solid #D3D3D3;
+}
+
+
+.table-header-bar{
+    display: flex;
+    font-weight: bold;
+    width: 80vw;
+    height: 6vh;
+    font-size: 1.1em;
+    background-color: #D3D3D3;
+}
+
+.table-rsvp-row{
+    display: flex;
+    width: 80vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+
+
+.table-header-bar > p {
+    margin-left: 5vw;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    align-content: center;
+}
+
+.table-rsvp-row > div{
+    margin-left: 5vw;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+
+.name, #rsvp-name, .phone-number, .email, #rsvp-phone-number, #rsvp-email {
+    width: 13vw;
+
+}
+
+.location, #rsvp-location{
+    width: 10vw;
+
+}
+
+#rsvp-name {
+    font-style: italic;
+}
+
+
+

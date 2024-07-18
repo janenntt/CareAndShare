@@ -1,0 +1,64 @@
+main{
+    font-family: 'Inter';
+    display: flex;
+    flex-direction: column;
+}
+
+main .a{
+    display: flex;
+    justify-content: center;
+}
+
+main .b{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.b p{
+    font-size: 1.2em;
+}
+
+.b input{
+    width: 700px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.d{
+    display: flex;
+    flex-direction: column;;
+    justify-content: center;
+    width: 100%;
+}
+
+#red{
+    color: white; 
+    background-color: #E42313;
+    width: 200px;
+    text-align: center; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 15px;
+}
+
+pre{
+    text-align: center;
+    font-size: 1.2em;
+}
+
+
+.e{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 150px;
+}
+
+.e h2, pre{
+    margin: 10px 0px 10px 0px;
+}
+
+.e p{
+    font-weight: bold;
+}

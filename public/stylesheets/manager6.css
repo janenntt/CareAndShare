@@ -1,0 +1,48 @@
+main{
+    font-family: 'Inter';
+
+    display: flex;
+    flex-direction: column;
+}
+
+main .up{
+    display: flex;
+    justify-content: flex-start;
+    background-color: #D3D3D3;
+}
+
+main img{
+    margin-left: 100px;
+    margin-right: 50px;
+}
+
+main .row{
+    display: flex;
+}
+
+main .row h1{
+    margin-right: 20px;
+}
+
+main .row img{
+    margin: 23px 5px 5px 5px;
+    width: 30px;
+    height: 30px;
+}
+
+main #red{
+    color: white; 
+    background-color: #E42313;
+    width: 100px;
+    text-align: center; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+main .down{
+    margin-left: 100px;
+    display: flex; 
+    justify-content: space-between;
+    width: 1500px;
+}

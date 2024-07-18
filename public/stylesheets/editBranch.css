@@ -1,0 +1,85 @@
+main {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+main img {
+    margin-top: 3vh;
+    width: 25vw;
+    height: 30vh;
+}
+
+h1{
+    margin-top: 5vh;
+    padding-bottom: 2vh;
+}
+
+.edit-branch-left{
+    padding-left: 10vw;
+}
+
+.edit-branch-right {
+    padding-top: 11vh;
+    padding-left: 12vw;
+}
+
+input, textarea{
+    width: 35vw;
+    font-size: 1.2em; /* Ensure the font size is the same */
+    border-radius: 5px;
+    border: 1px solid black;
+
+
+}
+
+input{
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    padding: 0.5em;
+}
+
+textarea{
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    height: 20vh;
+    padding: 0.5em;
+}
+
+.cancel-btn{
+    color: black;
+    background-color: lightgrey;
+    width: 10vw;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 1px;
+    font-weight: bold;
+}
+
+.save-btn{
+    color: white;
+    background-color: #E42313;
+    width: 10vw;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 1px;
+    font-weight: bold;
+}
+
+.branch-edit-btn {
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.branch-name-div, .branch-location-div, .branch-email-div, .branch-contact-div, .branch-description-div {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
